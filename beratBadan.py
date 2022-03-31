@@ -1,5 +1,4 @@
 #M. Satria Jalasena 19090090
-from crypt import methods
 from flask import Flask
 from flask import jsonify, request
 
@@ -21,7 +20,7 @@ def hitung():
     else:
         ket = 'Bahaya'
     
-    hasil = {'Keterangan berat menurut BMI': ket}
+    hasil = {'BMI': bmi, 'Keterangan': ket}
     return jsonify(hasil)
 
 if __name__ == '__main__':
